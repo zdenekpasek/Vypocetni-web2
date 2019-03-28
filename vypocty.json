@@ -1,0 +1,12 @@
+{
+    
+ "obsah":{"HTMLkod": "<div id=\"container\" style=\"margin-left:10px;\"><h1 style=\"text-align:center;\">Vypocty 2</h1></div>"},
+ "unarni":{"HTMLkod": "<h2>Unarni operace:</h2><label>Zadejte cislo:<input id=\"num1Un\" type=\"number\" value=\"0\"></label><select id=\"operatorsUn\"><option id=\"fak\" value=\"fact\">Faktorial</option><option id=\"fibo\" value=\"fibo\">Fibonacci</option></select><button onclick=\"spoctiUn()\">Spocitej</button><label>Vysledek:<input id=\"resultUn\" type=\"text\"></label><br/><hr>",
+           "funkce":"var n1 = parseInt(document.getElementById('num1Un').value);var op = document.getElementById('operatorsUn').value;var i, faktorial;faktorial = 1;if(op === 'fact'){for(i=2;i<=n1;i++){faktorial = faktorial * i;}document.getElementById('resultUn').value = faktorial;}if(op === 'fibo'){const pole = [0, 1];for(let i=2;i<=n1;i++){let a = pole[i - 1];let b = pole[i - 2];pole.push(a + b);}document.getElementById('resultUn').value = pole;}"},
+            
+ "binarni":{"HTMLkod": "<h2>Binarni operace:</h2><label>Zadejte cislo1:<input id=\"num1\" type=\"number\" value=\"0\"></label><label><select id=\"operatorsBin\"><option id=\"+\" value=\"+\">+</option><option id=\"-\" value=\"-\">-</option><option id=\"/\" value=\"/\">/</option></select></label><label>Zadejte cislo 2:<input id=\"num2\" type=\"number\" value=\"0\"></label><button onclick=\"spocti()\">Spocitej</button><label>Vysledek:<input id=\"resultBin\" type=\"text\"></label><br/><hr>",
+            "funkce":"var n1 = parseInt(document.getElementById('num1').value);var n2 = parseInt(document.getElementById('num2').value);var op = document.getElementById('operatorsBin').value;var i, faktorial;faktorial = 1;if(op === '+'){document.getElementById('resultBin').value = n1+n2;}if(op === '-'){document.getElementById('resultBin').value = n1-n2;}if(op === '/'){document.getElementById('resultBin').value = n1/n2;}"},
+ "textova":{"HTMLkod": "<h2>Textove operace:</h2><label>Zadejte text:<input id=\"txt\" type=\"text\" value=\"\"></label><select id=\"operatorsTxt\"><option id=\"rev\" value=\"revers\">Reverse</option></select><button onclick=\"spoctiTxt()\">Spocitej</button><label>Vysledek:<input id=\"resultTxt\" type=\"text\"></label>",
+            "funkce": " var txt = document.getElementById('txt').value;var op = document.getElementById('operatorsTxt').value; if(op === 'revers'){document.getElementById('resultTxt').value = txt.split(\"\").reverse().join(\"\");}"}
+
+}
